@@ -6,7 +6,7 @@
 /*   By: fsociety <fsociety@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:02:13 by fsociety          #+#    #+#             */
-/*   Updated: 2023/01/27 17:45:39 by fsociety         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:12:15 by fsociety         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ static void	ft_count(int sign)
 		string = ft_mkstr(character, string);
 		if (character == 0)
 		{
+			ft_putstr_fd("Message received with string: ", 1);
 			ft_putendl_fd(string, 1);
 			free(string);
 			string = NULL;

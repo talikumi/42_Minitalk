@@ -6,7 +6,7 @@
 /*   By: fsociety <fsociety@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:43:13 by fsociety          #+#    #+#             */
-/*   Updated: 2023/01/27 17:52:32 by fsociety         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:08:48 by fsociety         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,9 +102,13 @@ int	main(int argc, char *argv[])
 	char	*string;
 
 	if (argc != 3 || ft_check_argv(argv[1]) < 0)
+	{
+		ft_putendl_fd("Usage: ./client pid string", 1);
 		exit(0);
+	}
 	pid = ft_atoi(argv[1]);
 	string = argv[2];
 	ft_send_sig(pid, string);
+	ft_putendl_fd("Message sent to server!", 1);
 	return (0);
 }
