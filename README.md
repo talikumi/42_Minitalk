@@ -1,10 +1,16 @@
 Minitalk (C) 
 
 ## Table of Contents
+* [Summary](#summary)
 * [Subject](#subject)
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Additional Notes](#additional-notes)
+
+
+## Summary
+
+UNIX client-server communication project using only signals (SIGUSR1 and SIGUSR2). The server receives messages from multiple clients and prints them. Designed to understand low-level process communication, signal handling, and concurrent message processing on Linux.
 
 ## Subject
 
@@ -12,7 +18,12 @@ Minitalk (C)
 
 ## Usage
 
-This project includes a Makefile. You can use `make` to build the project. After building, run the executable file specified by the NAME variable in the Makefile
+This project includes a Makefile. You can run `make` to build the project. <br>
+Once compiled, execute the file (defined by the NAME variable inside the Makefile):
+
+```bash
+./$NAME
+```
 
 ## Project Status
 
